@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:notes_app/constans.dart';
 import 'package:notes_app/widgets/custom_buttom.dart';
-import 'package:notes_app/widgets/custom_textfiled.dart';
+import 'package:notes_app/widgets/custom_text_filed.dart';
 
 class AddNoteButtomSheet extends StatelessWidget {
   const AddNoteButtomSheet({super.key});
@@ -39,7 +39,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
       key: formKey,
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           CustomTextField(
