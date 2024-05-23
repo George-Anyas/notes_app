@@ -16,6 +16,7 @@ class AddNoteForm extends StatefulWidget {
 
 class _AddNoteFormState extends State<AddNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
+
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   String? title, subtitle;
   @override
@@ -53,6 +54,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 isLoading: state is AddNoteLoading ? true : false,
                 onTap: () {
                   if (formKey.currentState!.validate()) {
+                    var currentDate = DateTime.now();
+
                     formKey.currentState!.save();
                     var notemodel = NoteModel(
                         title: title!,
